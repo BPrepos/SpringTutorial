@@ -3,6 +3,7 @@ package com.mkbewe.ayou.dao;
 import com.mkbewe.ayou.model.Person;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 public interface PersonDao {
@@ -14,4 +15,10 @@ public interface PersonDao {
     }
 
     List<Person> selectAllPeople();
+
+    Optional<Person> selectPersonById(UUID id);
+
+    int deletePersonbyId(UUID id);
+
+    int updatePersonbyId(UUID id, Person person);
 }
